@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+node_modules/
+**/build/
+tmp/
+temp/
+data/
+coverage/
+dist/
+.env*
+ormconfig.json
+/.DS_Store
