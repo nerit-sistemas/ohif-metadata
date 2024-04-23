@@ -2,7 +2,7 @@ const args=process.argv.slice(2)
 const { spawn } = require('child_process')
 const fs = require('fs')
 
-function generateMetadata(studyDirectory, urlPrefix, outputPath,shouldReturnAsText=true,shouldDeleteDICOMFolder=false){
+function generateMetadata_v3_7(studyDirectory, urlPrefix, outputPath,shouldReturnAsText=true,shouldDeleteDICOMFolder=false){
 
     return generate(
         './node_modules/ohif-metadata/dicom-json-generator.js',
@@ -101,5 +101,5 @@ async function deleteFolder(folderPath) {
 }
 
 module.exports = {
-  generateMetadata
+  generateMetadata_v3_7
 }
