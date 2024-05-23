@@ -116,6 +116,7 @@ async function deleteMetadata(filePath){
 
 }
 
+// Exclui as pastas dos exames que criamos para gerar o metadata.json.
 async function deleteFolder(folderPath) {
 
     try {
