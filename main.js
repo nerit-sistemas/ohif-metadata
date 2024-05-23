@@ -90,6 +90,7 @@ async function generate(script,studyDirectory, urlPrefix, outputPath,shouldRetur
   })
 }
 
+//Exclui o arquivo metadata.json caso ele exista.
 async function deleteMetadata(filePath){
 
   try {
