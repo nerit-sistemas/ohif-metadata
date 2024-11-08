@@ -1,9 +1,9 @@
-const args=process.argv.slice(2)
 const { spawn } = require('child_process')
 const fs = require('fs')
 
-function generateMetadata_v3_7(studyDirectory, urlPrefix, outputPath,shouldReturnAsText=true,shouldDeleteDICOMFolder=false){
+const { convertDICOMToJSONThroughBuffer: generateMetadata_v3_7_through_buffer } = require('./dicom-json-lib')
 
+function generateMetadata_v3_7(studyDirectory, urlPrefix, outputPath,shouldReturnAsText=true,shouldDeleteDICOMFolder=false){
     return generate(
         './node_modules/ohif-metadata/dicom-json-generator.js',
         studyDirectory,
@@ -101,5 +101,6 @@ async function deleteFolder(folderPath) {
 }
 
 module.exports = {
-  generateMetadata_v3_7
+  generateMetadata_v3_7,
+  generateMetadata_v3_7_through_buffer
 }
